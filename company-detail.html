@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;公司详情&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="css/style.css"&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 id="company-name"&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pdf-viewer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;公司报告&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;iframe id="pdf-frame" src="" width="100%" height="600px" style="border: none;"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="my-analysis"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;我的分析&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="analysis-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="javascript:history.back()" class="back-button"&gt;返回公司列表&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const urlParams = new URLSearchParams(window.location.search);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const companyId = urlParams.get('companyId');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const companyName = urlParams.get('companyName');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('company-name').textContent = `${companyName} 详情`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const pdfFrame = document.getElementById('pdf-frame');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const analysisContent = document.getElementById('analysis-content');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 根据 companyId 设置 PDF 路径和分析内容</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (companyId === 'companyA') {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>pdfFrame.src = 'pdfs/companyA_report.pdf'; // 确保你有这个 PDF 文件</p>
+<p class="p1"><span class="Apple-converted-space">                </span>analysisContent.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;这是对**${companyName}**的详细分析。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;该公司在新能源领域表现突出，近期财报显示营收增长迅速，尤其在太阳能电池板技术方面有显著突破。未来市场前景广阔，但需要关注其供应链风险和国际贸易政策变化。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**优势**：技术领先，市场占有率高。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**劣势**：对单一市场依赖度高。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**机遇**：全球新能源需求持续增长。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**威胁**：政策变动，竞争加剧。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (companyId === 'companyB') {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>pdfFrame.src = 'pdfs/companyB_report.pdf'; // 确保你有这个 PDF 文件</p>
+<p class="p1"><span class="Apple-converted-space">                </span>analysisContent.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;这是对**${companyName}**的详细分析。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;该公司专注于电动汽车电池技术，近期获得多轮融资，技术储备雄厚。建议关注其生产成本控制和产能扩张计划。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**优势**：核心技术领先，资金充裕。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**劣势**：生产成本较高。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**机遇**：电动汽车市场爆发式增长。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**威胁**：原材料价格波动。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (companyId === 'companyX') {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>pdfFrame.src = 'pdfs/companyX_report.pdf'; // 确保你有这个 PDF 文件</p>
+<p class="p1"><span class="Apple-converted-space">                </span>analysisContent.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;这是对**${companyName}**的详细分析。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;该公司是消费电子领域的领头羊，以其创新产品和强大的品牌影响力著称。需要关注其产品迭代速度和市场竞争格局。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**优势**：品牌忠诚度高，研发投入大。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**劣势**：产品更新周期短。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**机遇**：新兴市场拓展。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**威胁**：技术快速迭代。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (companyId === 'companyY') {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>pdfFrame.src = 'pdfs/companyY_report.pdf'; // 确保你有这个 PDF 文件</p>
+<p class="p1"><span class="Apple-converted-space">                </span>analysisContent.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;这是对**${companyName}**的详细分析。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;该公司在智能穿戴设备市场表现亮眼，通过差异化竞争取得了一定市场份额。应关注其软件生态建设和用户粘性。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**优势**：产品设计独特，用户体验好。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**劣势**：市场竞争激烈。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**机遇**：健康监测功能需求增长。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;**威胁**：数据隐私合规性。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// ... 其他公司的数据和分析</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
