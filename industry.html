@@ -1,70 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司列表</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="zh-CN"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;公司列表&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="css/style.css"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 id="industry-title"&gt;&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="company-list" id="company-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="index.html" class="back-button"&gt;返回主页&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const urlParams = new URLSearchParams(window.location.search);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const category = urlParams.get('category');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('industry-title').textContent = `${category} - 公司列表`;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const companyListDiv = document.getElementById('company-list');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let companies = [];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// 这里你可以根据 category 加载不同的公司数据</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (category === '新能源') {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>companies = [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ name: '新能源公司A', id: 'companyA' },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ name: '新能源公司B', id: 'companyB' }</p>
-<p class="p1"><span class="Apple-converted-space">                </span>];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else if (category === '消费电子') {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>companies = [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ name: '消费电子公司X', id: 'companyX' },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ name: '消费电子公司Y', id: 'companyY' }</p>
-<p class="p1"><span class="Apple-converted-space">                </span>];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// ... 其他行业分类</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (companies.length &gt; 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>companies.forEach(company =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const companyLink = document.createElement('a');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>companyLink.href = `company-detail.html?companyId=${company.id}&amp;companyName=${company.name}`;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>companyLink.classList.add('company-item');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>companyLink.textContent = company.name;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>companyListDiv.appendChild(companyLink);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>companyListDiv.innerHTML = '&lt;p&gt;暂无公司数据。&lt;/p&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="container">
+        <h1 id="industry-title"></h1>
+        <div class="company-list" id="company-list">
+            </div>
+        <a href="index.html" class="back-button">返回主页</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            document.getElementById('industry-title').textContent = `${category} - 公司列表`;
+
+            const companyListDiv = document.getElementById('company-list');
+            let companies = [];
+
+            // 这里你可以根据 category 加载不同的公司数据
+            if (category === '新能源') {
+                companies = [
+                    { name: '新能源公司A', id: 'companyA' },
+                    { name: '新能源公司B', id: 'companyB' }
+                ];
+            } else if (category === '消费电子') {
+                companies = [
+                    { name: '消费电子公司X', id: 'companyX' },
+                    { name: '消费电子公司Y', id: 'companyY' }
+                ];
+            }
+            // ... 其他行业分类
+
+            if (companies.length > 0) {
+                companies.forEach(company => {
+                    const companyLink = document.createElement('a');
+                    companyLink.href = `company-detail.html?companyId=${company.id}&companyName=${company.name}`;
+                    companyLink.classList.add('company-item');
+                    companyLink.textContent = company.name;
+                    companyListDiv.appendChild(companyLink);
+                });
+            } else {
+                companyListDiv.innerHTML = '<p>暂无公司数据。</p>';
+            }
+        });
+    </script>
 </body>
 </html>
