@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司详情</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="company-name"></h1>
+        <div class="pdf-viewer">
+            <h2>公司报告</h2>
+            <iframe id="pdf-frame" src="" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+
+        <div class="my-analysis">
+            <h2>我的分析</h2>
+            <p id="analysis-content">
+                </p>
+        </div>
+        <a href="javascript:history.back()" class="back-button">返回公司列表</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const companyId = urlParams.get('companyId');
+            const companyName = urlParams.get('companyName');
+
+            document.getElementById('company-name').textContent = `${companyName} 详情`;
+
+            const pdfFrame = document.getElementById('pdf-frame');
+            const analysisContent = document.getElementById('analysis-content');
+
+            // 根据 companyId 设置 PDF 路径和分析内容
+            if (companyId === 'companyA') {
+                pdfFrame.src = 'pdfs/companyA_report.pdf'; // 确保你有这个 PDF 文件
+                analysisContent.innerHTML = `
+                    <p>这是对**${companyName}**的详细分析。</p>
+                    <p>该公司在新能源领域表现突出，近期财报显示营收增长迅速，尤其在太阳能电池板技术方面有显著突破。未来市场前景广阔，但需要关注其供应链风险和国际贸易政策变化。</p>
+                    <ul>
+                        <li>**优势**：技术领先，市场占有率高。</li>
+                        <li>**劣势**：对单一市场依赖度高。</li>
+                        <li>**机遇**：全球新能源需求持续增长。</li>
+                        <li>**威胁**：政策变动，竞争加剧。</li>
+                    </ul>
+                `;
+            } else if (companyId === 'companyB') {
+                pdfFrame.src = 'pdfs/companyB_report.pdf'; // 确保你有这个 PDF 文件
+                analysisContent.innerHTML = `
+                    <p>这是对**${companyName}**的详细分析。</p>
+                    <p>该公司专注于电动汽车电池技术，近期获得多轮融资，技术储备雄厚。建议关注其生产成本控制和产能扩张计划。</p>
+                    <ul>
+                        <li>**优势**：核心技术领先，资金充裕。</li>
+                        <li>**劣势**：生产成本较高。</li>
+                        <li>**机遇**：电动汽车市场爆发式增长。</li>
+                        <li>**威胁**：原材料价格波动。</li>
+                    </ul>
+                `;
+            } else if (companyId === 'companyX') {
+                pdfFrame.src = 'pdfs/companyX_report.pdf'; // 确保你有这个 PDF 文件
+                analysisContent.innerHTML = `
+                    <p>这是对**${companyName}**的详细分析。</p>
+                    <p>该公司是消费电子领域的领头羊，以其创新产品和强大的品牌影响力著称。需要关注其产品迭代速度和市场竞争格局。</p>
+                    <ul>
+                        <li>**优势**：品牌忠诚度高，研发投入大。</li>
+                        <li>**劣势**：产品更新周期短。</li>
+                        <li>**机遇**：新兴市场拓展。</li>
+                        <li>**威胁**：技术快速迭代。</li>
+                    </ul>
+                `;
+            } else if (companyId === 'companyY') {
+                pdfFrame.src = 'pdfs/companyY_report.pdf'; // 确保你有这个 PDF 文件
+                analysisContent.innerHTML = `
+                    <p>这是对**${companyName}**的详细分析。</p>
+                    <p>该公司在智能穿戴设备市场表现亮眼，通过差异化竞争取得了一定市场份额。应关注其软件生态建设和用户粘性。</p>
+                    <ul>
+                        <li>**优势**：产品设计独特，用户体验好。</li>
+                        <li>**劣势**：市场竞争激烈。</li>
+                        <li>**机遇**：健康监测功能需求增长。</li>
+                        <li>**威胁**：数据隐私合规性。</li>
+                    </ul>
+                `;
+            }
+            // ... 其他公司的数据和分析
+        });
+    </script>
+</body>
+</html>
