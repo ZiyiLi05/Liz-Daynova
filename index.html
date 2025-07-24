@@ -3,20 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>行业分类</title>
+    <title>李子怡的个人博客 - 记录与分享</title>
+    <!-- 引入核心样式文件 -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- 引入 Google Fonts 的 Inter 字体，用于专业简洁的排版 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>选择行业类别</h1>
-        <div class="industry-grid">
-            <a href="industry.html?category=新能源" class="industry-button">新能源</a>
-            <a href="industry.html?category=消费电子" class="industry-button">消费电子</a>
-            <a href="industry.html?category=医疗健康" class="industry-button">医疗健康</a>
-            <a href="industry.html?category=人工智能" class="industry-button">人工智能</a>
-            <a href="industry.html?category=光电信息" class="industry-button">光电信息</a>
-            <a href="industry.html?category=高端制造" class="industry-button">高端制造</a>
+    <!-- 页面头部：包含导航栏 -->
+    <header class="header">
+        <div class="container">
+            <!-- 博客标题/Logo -->
+            <div class="blog-logo">
+                <a href="index.html">李子怡的博客</a>
+            </div>
+            <!-- 主导航菜单 -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我</a></li>
+                    <li><a href="resume.html">简历</a></li>
+                    <!-- 其他主要分类链接，这里仅作示例，实际会通过JS动态生成或直接链接到category.html?id=... -->
+                    <li><a href="category.html?id=japanese">日语</a></li>
+                    <li><a href="category.html?id=financial-research">金融行研</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <!-- 页面主体内容区域 -->
+    <main class="main-content-wrapper container">
+        <!-- 左侧面板：个人介绍和头像 -->
+        <aside class="left-panel">
+            <div class="profile-card">
+                <!-- 个人头像 -->
+                <img src="images/avatar.jpg" alt="李子怡的头像" class="avatar">
+                <!-- 自我介绍 -->
+                <div class="self-introduction">
+                    <h2>李子怡</h2>
+                    <p>一位热爱生活与学习的金融从业者，在这里分享我的工作笔记、行业洞察、CFA备考经验，以及日语、法语、商务英语的学习心得。同时，也记录摄影、滑板、钢琴、吉他等兴趣爱好带来的乐趣。</p>
+                    <p>期待与您一同成长，探索更多可能。</p>
+                    <a href="about.html" class="btn btn-primary">了解更多</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 右侧面板：内容板块列表 -->
+        <section class="right-panel">
+            <h1 class="section-title">我的分享与记录</h1>
+            <div class="category-grid" id="category-grid">
+                <!--
+                    这里将通过 JavaScript 动态加载各个板块（日语、法语、金融行研等）
+                    每个板块会是一个方块，包含标题和最新文章列表
+                -->
+                <!-- 示例结构 (会被JS替换或填充):
+                <div class="category-block">
+                    <h3>【日语】</h3>
+                    <ul class="latest-articles-list">
+                        <li><a href="post.html?id=jp-post1">我的日语学习心得 (2023-10-26)</a></li>
+                        <li><a href="post.html?id=jp-post2">日本文化体验之旅 (2023-09-15)</a></li>
+                    </ul>
+                    <a href="category.html?id=japanese" class="view-all-link">查看全部 ></a>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 页面底部：页脚信息 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 李子怡. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- 引入 JavaScript 文件，用于动态加载内容 -->
+    <script src="js/data.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

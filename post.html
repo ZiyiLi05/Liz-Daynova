@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="post-page-title">文章详情 - 李子怡的个人博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="blog-logo">
+                <a href="index.html">李子怡的博客</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我</a></li>
+                    <li><a href="resume.html">简历</a></li>
+                    <li><a href="category.html?id=japanese">日语</a></li>
+                    <li><a href="category.html?id=financial-research">金融行研</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <h1 class="page-title" id="post-title"></h1>
+        <p class="post-meta" id="post-meta"></p>
+        <div class="content-block post-content-area" id="post-content">
+            <!-- 文章内容（文本、PDF、图片）将由 JavaScript 动态加载 -->
+        </div>
+        <a href="javascript:history.back()" class="btn btn-primary back-link">返回</a>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 李子怡. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
