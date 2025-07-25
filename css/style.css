@@ -14,7 +14,7 @@
 }
 
 /* 全局样式 */
-html, body { /* 修正：确保html和body占据整个视口宽度 */
+html, body { /* 确保html和body占据整个视口宽度 */
     width: 100%;
     margin: 0;
     padding: 0;
@@ -24,8 +24,6 @@ html, body { /* 修正：确保html和body占据整个视口宽度 */
 body {
     font-family: 'Inter', sans-serif; /* 使用 Inter 字体 */
     line-height: 1.6; /* 行高 */
-    /* margin: 0; /* 移除默认外边距 - 已移至html, body */
-    /* padding: 0; /* 移除默认内边距 - 已移至html, body */
     background-color: var(--morandi-light-grey); /* 页面背景色 */
     color: var(--morandi-text-dark); /* 默认文本颜色 */
     display: flex; /* 使用 Flexbox 布局 */
@@ -139,8 +137,9 @@ a:hover {
 }
 
 .left-panel {
-    flex: 1; /* 占据 1 份空间 */
-    max-width: 25%; /* 最大宽度限制为 25% */
+    flex: 1; /* 占据 1 份空间 (1/4 宽度) */
+    /* 移除 max-width，让 flex 属性完全控制宽度 */
+    /* max-width: 25%; */
     background-color: var(--morandi-off-white); /* 背景色 */
     border-radius: 8px; /* 圆角 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 阴影 */
@@ -179,7 +178,7 @@ a:hover {
 }
 
 .right-panel {
-    flex: 3; /* 占据 3 份空间 */
+    flex: 3; /* 占据 3 份空间 (3/4 宽度) */
     background-color: var(--morandi-off-white); /* 背景色 */
     border-radius: 8px; /* 圆角 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 阴影 */
@@ -199,9 +198,9 @@ a:hover {
 .category-grid {
     display: grid; /* 网格布局 */
     /* 调整：减小最小宽度，让更多列可以显示 */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 自动适应列宽，最小220px */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自动适应列宽，最小200px，确保能容纳更多列 */
     /* 调整：减小网格间距 */
-    gap: 20px; /* 网格间距 */
+    gap: 15px; /* 网格间距 */
 }
 
 .category-block {
@@ -209,7 +208,7 @@ a:hover {
     background-color: var(--morandi-off-white); /* 新的板块背景色 */
     border-radius: 8px; /* 圆角 */
     /* 调整：略微减小内边距，让板块更紧凑 */
-    padding: 20px; /* 内边距 */
+    padding: 18px; /* 内边距 */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 阴影 */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
     display: flex; /* Flexbox 布局 */
@@ -223,10 +222,10 @@ a:hover {
 }
 
 .category-block h3 {
-    font-size: 1.4em; /* 略微减小字体大小 */
+    font-size: 1.3em; /* 略微减小字体大小 */
     color: var(--morandi-dusty-blue); /* 颜色 */
     margin-top: 0; /* 移除顶部外边距 */
-    margin-bottom: 12px; /* 底部外边距 */
+    margin-bottom: 10px; /* 底部外边距 */
     padding-bottom: 8px; /* 底部内边距 */
     border-bottom: 1px solid var(--morandi-muted-green); /* 底部边框 */
     text-align: center; /* 文本居中 */
@@ -235,16 +234,16 @@ a:hover {
 .latest-articles-list {
     list-style: none; /* 移除列表点 */
     padding: 0; /* 移除内边距 */
-    margin: 0 0 15px 0; /* 略微减小底部外边距 */
+    margin: 0 0 12px 0; /* 略微减小底部外边距 */
     flex-grow: 1; /* 占据剩余空间 */
 }
 
 .latest-articles-list li {
-    margin-bottom: 8px; /* 略微减小底部外边距 */
+    margin-bottom: 6px; /* 略微减小底部外边距 */
 }
 
 .latest-articles-list a {
-    font-size: 0.95em; /* 略微减小字体大小 */
+    font-size: 0.9em; /* 略微减小字体大小 */
     color: var(--morandi-text-dark); /* 链接颜色 */
     display: block; /* 块级显示 */
     padding: 6px 0; /* 略微减小内边距 */
@@ -258,7 +257,7 @@ a:hover {
 .view-all-link {
     display: block; /* 块级显示 */
     text-align: right; /* 文本右对齐 */
-    font-size: 0.85em; /* 略微减小字体大小 */
+    font-size: 0.8em; /* 略微减小字体大小 */
     color: var(--morandi-text-light); /* 颜色 */
     margin-top: auto; /* 推到最底部 */
 }
