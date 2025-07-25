@@ -5,7 +5,7 @@ const blogData = {
     // 个人介绍数据
     profile: {
         name: "Liz",
-        intro: 【个人介绍正在赶来的路上】,
+        intro:  '【个人介绍正在赶来的路上】',
         // 简历内容的占位符，实际应指向一个PDF文件或一个详细的HTML页面
         resumeContent: "images/my_resume.pdf", // 假设简历是一个PDF
         aboutContent: `
