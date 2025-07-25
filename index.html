@@ -33,7 +33,8 @@
     </header>
 
     <!-- 页面主体内容区域 -->
-    <main class="main-content-wrapper container">
+    <!-- 修正：从main标签中移除 'container' 类 -->
+    <main class="main-content-wrapper">
         <!-- 左侧面板：个人介绍和头像 -->
         <aside class="left-panel">
             <div class="profile-card">
@@ -42,7 +43,8 @@
                 <!-- 自我介绍 -->
                 <div class="self-introduction">
                     <h2>Liz</h2>
-                    <p>【个人介绍正在赶来的路上】</p>
+                    <!-- 修正：将这里的内容改为通过JavaScript动态加载 -->
+                    <p id="profile-intro"></p> 
                     <p>·灵魂的渴望是命运的先知·</p>
                     <a href="about.html" class="btn btn-primary">了解更多</a>
                 </div>

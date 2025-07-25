@@ -16,8 +16,8 @@
 /* 全局样式 */
 html, body { /* 确保html和body占据整个视口宽度 */
     width: 100%;
-    /* 修正：为margin添加!important，强制清除外边距 */
-    margin: 0 !important; 
+    height: 100%; /* 确保高度也占满 */
+    margin: 0 !important; /* 修正：为margin添加!important，强制清除外边距 */
     padding: 0;
     overflow-x: hidden; /* 防止水平滚动条 */
 }
@@ -32,7 +32,7 @@ body {
     min-height: 100vh; /* 最小高度占满视口，使页脚始终在底部 */
 }
 
-/* 容器类：限制内容宽度并居中 */
+/* 容器类：用于头部和底部的宽度限制和居中 */
 .container {
     max-width: 90vw; /* 最大宽度设置为视口宽度的90% */
     margin: 0 auto; /* 左右自动外边距实现居中 */
@@ -131,6 +131,8 @@ a:hover {
 /* 主内容区域布局 (左右分页) */
 .main-content-wrapper {
     display: flex; /* Flexbox 布局 */
+    width: 90vw; /* 修正：直接设置宽度为视口宽度的90% */
+    margin: 0 auto; /* 修正：居中显示 */
     gap: 30px; /* 子元素之间的间距 */
     padding-top: 40px; /* 顶部内边距 */
     padding-bottom: 40px; /* 底部内边距 */
