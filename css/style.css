@@ -14,11 +14,18 @@
 }
 
 /* 全局样式 */
+html, body { /* 修正：确保html和body占据整个视口宽度 */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 防止水平滚动条 */
+}
+
 body {
     font-family: 'Inter', sans-serif; /* 使用 Inter 字体 */
     line-height: 1.6; /* 行高 */
-    margin: 0; /* 移除默认外边距 */
-    padding: 0; /* 移除默认内边距 */
+    /* margin: 0; /* 移除默认外边距 - 已移至html, body */
+    /* padding: 0; /* 移除默认内边距 - 已移至html, body */
     background-color: var(--morandi-light-grey); /* 页面背景色 */
     color: var(--morandi-text-dark); /* 默认文本颜色 */
     display: flex; /* 使用 Flexbox 布局 */
@@ -28,7 +35,7 @@ body {
 
 /* 容器类：限制内容宽度并居中 */
 .container {
-    max-width: 90vw; /* 修正：最大宽度设置为视口宽度的90% */
+    max-width: 90vw; /* 最大宽度设置为视口宽度的90% */
     margin: 0 auto; /* 左右自动外边距实现居中 */
     padding: 20px; /* 内边距 */
 }
