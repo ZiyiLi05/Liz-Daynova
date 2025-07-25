@@ -16,7 +16,8 @@
 /* 全局样式 */
 html, body { /* 确保html和body占据整个视口宽度 */
     width: 100%;
-    margin: 0;
+    /* 修正：为margin添加!important，强制清除外边距 */
+    margin: 0 !important; 
     padding: 0;
     overflow-x: hidden; /* 防止水平滚动条 */
 }
