@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const latestArticlesList = document.createElement('ul');
                 latestArticlesList.classList.add('latest-articles-list');
 
-                // 筛选并获取该分类下最新的3篇文章
+                // 筛选并获取该分类下最新的2篇文章
                 const articlesInCategory = blogData.articles
                     .filter(article => article.category === category.id)
-                    .slice(0, 3); // 只取最新的3篇
+                    .slice(0, 2); // 只取最新的3篇
 
                 if (articlesInCategory.length > 0) {
                     articlesInCategory.forEach(article => {

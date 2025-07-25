@@ -4,15 +4,15 @@
 const blogData = {
     // 个人介绍数据
     profile: {
-        name: "李子怡",
-        intro: "一位热爱生活与学习的金融从业者，在这里分享我的工作笔记、行业洞察、CFA备考经验，以及日语、法语、商务英语的学习心得。同时，也记录摄影、滑板、钢琴、吉他等兴趣爱好带来的乐趣。期待与您一同成长，探索更多可能。",
+        name: "Liz",
+        intro: 【个人介绍正在赶来的路上】,
         // 简历内容的占位符，实际应指向一个PDF文件或一个详细的HTML页面
         resumeContent: "images/my_resume.pdf", // 假设简历是一个PDF
         aboutContent: `
-            <p>大家好，我是李子怡，一位在金融行业深耕多年的专业人士。我热爱我的工作，也享受生活中的点滴乐趣。这个博客是我分享知识、记录成长的平台。</p>
-            <p>在金融领域，我专注于金融行研，对宏观经济、行业趋势和公司基本面有深入的理解。我在这里分享我的工作笔记、行业分析和CFA备考经验，希望能为同行提供一些参考。</p>
-            <p>除了工作，我还是一个积极的学习者和探索者。我正在学习日语、法语和商务英语，希望通过语言打开通往世界的大门。在业余时间，我喜欢用镜头捕捉生活中的美好瞬间（摄影），在滑板上感受风的速度，用钢琴和吉他弹奏心中的旋律。</p>
-            <p>我相信学习和分享是最好的成长方式。如果你对金融、语言学习或我的任何兴趣爱好感兴趣，欢迎与我交流！</p>
+            <p>【介绍1】</p>
+            <p>【介绍2】</p>
+            <p>【介绍3】</p>
+            <p>【介绍4】</p>
         `
     },
 
@@ -23,12 +23,8 @@ const blogData = {
     categories: [
         { id: 'personal-intro', title: '个人介绍', link: 'about.html' }, // 链接到独立页面
         { id: 'resume', title: '简历', link: 'resume.html' }, // 链接到独立页面
-        { id: 'japanese', title: '日语', description: '日语学习心得与文化分享' },
-        { id: 'french', title: '法语', description: '法语学习之路' },
-        { id: 'business-english', title: '商务英语', description: '商务沟通技巧与实践' },
-        { id: 'financial-research', title: '金融行研', description: '行业深度分析与报告解读' },
-        { id: 'work-notes', title: '工作笔记', description: '日常工作经验与思考' },
-        { id: 'cfa-prep', title: 'CFA备考', description: 'CFA考试经验与资料分享' },
+        { id: 'language', title: '语言', description: '语言学习心得与文化分享' },
+        { id: 'finance', title: '金融', description: '行业研究及工作思考' },
         { id: 'photography', title: '摄影', description: '光影记录生活' },
         { id: 'skateboarding', title: '滑板', description: '滑板运动的乐趣与挑战' },
         { id: 'piano', title: '钢琴', description: '钢琴学习与演奏记录' },
@@ -49,7 +45,7 @@ const blogData = {
         // 金融行研
         {
             id: 'finance-001',
-            category: 'financial-research',
+            category: 'finance',
             title: '2024年新能源汽车行业深度分析报告',
             date: '2024-07-20',
             thumbnail: 'images/thumbnails/finance_thumb1.jpg',
@@ -59,7 +55,7 @@ const blogData = {
         },
         {
             id: 'finance-002',
-            category: 'financial-research',
+            category: 'finance',
             title: 'AI在金融领域的应用前景探讨',
             date: '2024-06-15',
             thumbnail: 'images/thumbnails/finance_thumb2.jpg',
@@ -75,13 +71,13 @@ const blogData = {
                 <p>尽管AI带来了巨大的机遇，但也面临数据隐私、算法透明度、监管合规等挑战。未来，随着技术的成熟和监管框架的完善，AI将在金融领域发挥更核心的作用。</p>
             `
         },
-        // 日语
+        // 语言
         {
             id: 'jp-001',
-            category: 'japanese',
-            title: '我的日语学习心得：从N3到N2的飞跃',
+            category: 'language',
+            title: '我的日语学习心得：从N100到N79的飞跃',
             date: '2023-10-26',
-            thumbnail: 'images/thumbnails/jp_thumb1.jpg',
+            thumbnail: 'images/thumbnails/lang_thumb1.jpg',
             type: 'text',
             content: `
                 <p>日语学习是一个漫长而有趣的过程。从N3到N2，我总结了一些经验，希望能帮助到正在学习日语的朋友们。</p>
@@ -97,10 +93,10 @@ const blogData = {
         },
         {
             id: 'jp-002',
-            category: 'japanese',
+            category: 'language',
             title: '日本京都秋日摄影之旅',
             date: '2023-09-15',
-            thumbnail: 'images/thumbnails/jp_thumb2.jpg',
+            thumbnail: 'images/thumbnails/lang_thumb2.jpg',
             type: 'image',
             imageUrl: 'images/posts/kyoto_autumn.jpg', // 假设这是一张大图
             content: '' // 图片类型文章，content为空
@@ -108,10 +104,10 @@ const blogData = {
         // CFA备考
         {
             id: 'cfa-001',
-            category: 'cfa-prep',
+            category: 'finance',
             title: 'CFA一级备考经验分享与资料推荐',
             date: '2024-03-01',
-            thumbnail: 'images/thumbnails/cfa_thumb1.jpg',
+            thumbnail: 'images/thumbnails/finance_thumb1.jpg',
             type: 'text',
             content: `
                 <p>CFA一级考试是金融专业人士的敲门砖，备考过程充满挑战但也收获满满。以下是我的一些备考经验和资料推荐：</p>
@@ -127,10 +123,10 @@ const blogData = {
         // 摄影
         {
             id: 'photo-001',
-            category: 'photography',
+            category: 'hobby',
             title: '城市夜景摄影技巧分享',
             date: '2024-05-10',
-            thumbnail: 'images/thumbnails/photo_thumb1.jpg',
+            thumbnail: 'images/thumbnails/hobby_thumb1.jpg',
             type: 'text',
             content: `
                 <p>拍摄迷人的城市夜景需要一些技巧。以下是我在实践中总结的一些经验：</p>
@@ -144,51 +140,14 @@ const blogData = {
                 <p>多尝试不同的角度和曝光组合，你会发现夜景的无限魅力。</p>
             `
         },
-        // 滑板
-        {
-            id: 'skate-001',
-            category: 'skateboarding',
-            title: '我的第一个Ollie：从摔倒到起飞',
-            date: '2023-08-01',
-            thumbnail: 'images/thumbnails/skate_thumb1.jpg',
-            type: 'text',
-            content: `
-                <p>Ollie是滑板的基础动作，也是最让人兴奋的动作之一。我花了很长时间才掌握它，期间摔了很多次，但每次站起来都离成功更近一步。</p>
-                <h3>Ollie学习心得</h3>
-                <ul>
-                    <li><strong>反复练习：</strong> 没有捷径，只有不断重复。</li>
-                    <li><strong>分解动作：</strong> 先练习踩板、滑行，再练习跳跃和摩擦。</li>
-                    <li><strong>观看教学视频：</strong> 学习标准动作，纠正自己的错误。</li>
-                </ul>
-                <p>坚持下去，你也能飞起来！</p>
-            `
-        },
-        // 钢琴
-        {
-            id: 'piano-001',
-            category: 'piano',
-            title: '古典钢琴入门：我的启蒙之路',
-            date: '2023-07-05',
-            thumbnail: 'images/thumbnails/piano_thumb1.jpg',
-            type: 'text',
-            content: `
-                <p>钢琴是我从小就喜欢的乐器。虽然现在工作很忙，但我仍然坚持练习。以下是我对古典钢琴入门的一些看法：</p>
-                <h3>入门建议</h3>
-                <ul>
-                    <li><strong>找一位好老师：</strong> 专业的指导能让你少走弯路。</li>
-                    <li><strong>从基础乐理开始：</strong> 了解音符、节奏、和弦是学习的基础。</li>
-                    <li><strong>坚持练习：</strong> 每天固定时间练习，哪怕只有15分钟。</li>
-                </ul>
-                <p>钢琴的世界很美妙，希望更多人能加入进来。</p>
-            `
-        },
+       
         // 吉他
         {
             id: 'guitar-001',
-            category: 'guitar',
+            category: 'hobby',
             title: '民谣吉他基础和弦速成',
             date: '2023-06-20',
-            thumbnail: 'images/thumbnails/guitar_thumb1.jpg',
+            thumbnail: 'images/thumbnails/hobby_thumb2.jpg',
             type: 'text',
             content: `
                 <p>民谣吉他入门最快的方法就是掌握几个基础和弦。一旦掌握了它们，你就能弹唱很多歌曲。</p>
