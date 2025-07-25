@@ -135,7 +135,7 @@ const blogData = {
                     <li><strong>使用三脚架：</strong> 夜景通常需要长时间曝光，三脚架是必不可少的。</li>
                     <li><strong>低ISO：</strong> 尽量使用最低ISO，以减少噪点。</li>
                     <li><strong>广角镜头：</strong> 捕捉城市全景的利器。</li>
-                    <li><strong>寻找光源：：</strong> 利用城市灯光、车流光轨等作为画面元素。</li>
+                    <li><strong>寻找光源：</strong> 利用城市灯光、车流光轨等作为画面元素。</li>
                 </ul>
                 <p>多尝试不同的角度和曝光组合，你会发现夜景的无限魅力。</p>
             `
@@ -154,7 +154,7 @@ const blogData = {
                 <h3>基础和弦</h3>
                 <ul>
                     <li><strong>C大调：</strong> C, G, Am, F</li>
-                    <li><strong>G大调：：</strong> G, C, D, Em</li>
+                    <li><strong>G大调：</strong> G, C, D, Em</li>
                 </ul>
                 <p>多练习和弦转换，让手指肌肉形成记忆。享受吉他带来的音乐乐趣吧！</p>
             `

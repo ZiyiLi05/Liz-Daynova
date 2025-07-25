@@ -28,7 +28,7 @@ body {
 
 /* 容器类：限制内容宽度并居中 */
 .container {
-    max-width: 1200px; /* 最大宽度 */
+    max-width: 90vw; /* 修正：最大宽度设置为视口宽度的90% */
     margin: 0 auto; /* 左右自动外边距实现居中 */
     padding: 20px; /* 内边距 */
 }
