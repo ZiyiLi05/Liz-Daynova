@@ -5,9 +5,9 @@ const blogData = {
     // 个人介绍数据
     profile: {
         name: "Liz",
-        intro:  '【个人介绍正在赶来的路上】',
+        intro: "【个人介绍正在赶来的路上】", // 保持用户内容，已用引号包裹
         // 简历内容的占位符，实际应指向一个PDF文件或一个详细的HTML页面
-        resumeContent: "images/my_resume.pdf", // 假设简历是一个PDF
+        resumeContent: "images/my_resume.pdf",
         aboutContent: `
             <p>【介绍1】</p>
             <p>【介绍2】</p>
@@ -21,8 +21,8 @@ const blogData = {
     // title: 显示在页面上的标题
     // description: 分类的简短描述 (可选)
     categories: [
-        { id: 'personal-intro', title: '个人介绍', link: 'about.html' }, // 链接到独立页面
-        { id: 'resume', title: '简历', link: 'resume.html' }, // 链接到独立页面
+        { id: 'personal-intro', title: '个人介绍', link: 'about.html' },
+        { id: 'resume', title: '简历', link: 'resume.html' },
         { id: 'language', title: '语言', description: '语言学习心得与文化分享' },
         { id: 'finance', title: '金融', description: '行业研究及工作思考' },
         { id: 'photography', title: '摄影', description: '光影记录生活' },
@@ -51,7 +51,7 @@ const blogData = {
             thumbnail: 'images/thumbnails/finance_thumb1.jpg',
             type: 'pdf',
             pdfUrl: 'pdfs/finance_report_new_energy.pdf',
-            content: '' // PDF类型文章，content为空
+            content: ''
         },
         {
             id: 'finance-002',
@@ -83,8 +83,8 @@ const blogData = {
                 <p>日语学习是一个漫长而有趣的过程。从N3到N2，我总结了一些经验，希望能帮助到正在学习日语的朋友们。</p>
                 <h3>关键学习策略</h3>
                 <ol>
-                    <li>**词汇积累：** 每天坚持背诵新词汇，并结合例句记忆。推荐使用Anki等间隔重复软件。</li>
-                    <li>**语法理解：** 不要死记硬背语法点，要理解其语感和使用场景。多做练习，多造句。</li>
+                    <li><strong>词汇积累：</strong> 每天坚持背诵新词汇，并结合例句记忆。推荐使用Anki等间隔重复软件。</li>
+                    <li><strong>语法理解：</strong> 不要死记硬背语法点，要理解其语感和使用场景。多做练习，多造句。</li> <!-- 修正：移除了多余的冒号 -->
                     <li><strong>听力训练：</strong> 每天听日语新闻、播客、动漫，从简单到复杂，逐步提高听力能力。</li>
                     <li><strong>口语练习：</strong> 找语伴或参加线上交流，勇敢开口说日语，不怕犯错。</li>
                 </ol>
@@ -98,8 +98,8 @@ const blogData = {
             date: '2023-09-15',
             thumbnail: 'images/thumbnails/lang_thumb2.jpg',
             type: 'image',
-            imageUrl: 'images/posts/kyoto_autumn.jpg', // 假设这是一张大图
-            content: '' // 图片类型文章，content为空
+            imageUrl: 'images/posts/kyoto_autumn.jpg',
+            content: ''
         },
         // CFA备考
         {
@@ -115,7 +115,7 @@ const blogData = {
                 <ul>
                     <li><strong>制定详细计划：</strong> 将所有科目分配到每周甚至每天，确保进度。</li>
                     <li><strong>理解而非死记：</strong> CFA注重理解概念和应用，多做题是关键。</li>
-                    <li><strong>善用官方教材和Mocks：</strong> 官方教材是基础，Mocks是检验和适应考试节奏的最佳方式。</li>
+                    <li><strong>善用官方教材和Mocks：：</strong> 官方教材是基础，Mocks是检验和适应考试节奏的最佳方式。</li>
                 </ul>
                 <p>祝所有CFA考生都能顺利通过！</p>
             `
@@ -135,7 +135,7 @@ const blogData = {
                     <li><strong>使用三脚架：</strong> 夜景通常需要长时间曝光，三脚架是必不可少的。</li>
                     <li><strong>低ISO：</strong> 尽量使用最低ISO，以减少噪点。</li>
                     <li><strong>广角镜头：</strong> 捕捉城市全景的利器。</li>
-                    <li><strong>寻找光源：</strong> 利用城市灯光、车流光轨等作为画面元素。</li>
+                    <li><strong>寻找光源：：</strong> 利用城市灯光、车流光轨等作为画面元素。</li>
                 </ul>
                 <p>多尝试不同的角度和曝光组合，你会发现夜景的无限魅力。</p>
             `
@@ -154,7 +154,7 @@ const blogData = {
                 <h3>基础和弦</h3>
                 <ul>
                     <li><strong>C大调：</strong> C, G, Am, F</li>
-                    <li><strong>G大调：</strong> G, C, D, Em</li>
+                    <li><strong>G大调：：</strong> G, C, D, Em</li>
                 </ul>
                 <p>多练习和弦转换，让手指肌肉形成记忆。享受吉他带来的音乐乐趣吧！</p>
             `
